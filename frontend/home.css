@@ -1,0 +1,41 @@
+header{
+    background-color: aliceblue;
+    padding: 1.5% 0 1.5% 0;
+    opacity: 0.9;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    font-family:Brush Script MT;
+    color: blanchedalmond;
+    font-size: 22px;
+}
+
+p{
+    text-align: center;
+    column-count: 2;
+    padding:202px;
+    font-size: 33px;
+    font-family: Courier New;
+}
+
+img{
+    transform: rotate(270deg);
+   
+    height: 800px;
+    
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+ 
+
+  body{
+    background-color:hsl(275, 100%, 82%) ;
+  }
