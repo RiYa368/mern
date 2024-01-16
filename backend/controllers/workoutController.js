@@ -10,6 +10,13 @@ const getWorkouts = async (req, res) => {
 
 const getWorkout = async (req, res) => {
     const { id } = req.params
+
+    const workout = await Workout.findById(id)
+
+    if(!workout){
+      return res.status(404).json({error:"no such workout found"})
+    }
+    res.status(200).json(workout)
 }
 
 // delete a workout <3
@@ -33,5 +40,7 @@ const createWorkout = async (req, res) =>{
 
 
 modules.exports ={
+  getWorkouts,
+  getWorkout,
     createWorkout
 }
