@@ -17,10 +17,6 @@ function App() {
                path="/" 
               element={<Home />} 
             />
-            {/* <Route 
-               path="/about/us" 
-              element={<Us />} 
-            /> */}
           </Routes>
         </div>
       </BrowserRouter>
