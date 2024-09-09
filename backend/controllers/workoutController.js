@@ -1,11 +1,16 @@
 const Workout = require('../models/workoutModel')
 const mongoose = require('mongoose')
 
+
+
 // get all workouts <3
 const getWorkouts = async (req, res) => {
     const workouts = await Workout.find({}).sort({createdAt: -1})
+   
     res.status(200).json(workouts)
 }
+
+
 
 //get a single workout <3
 const getWorkout = async (req, res) => {
@@ -22,6 +27,8 @@ const getWorkout = async (req, res) => {
     }
     res.status(200).json(workout)
 }
+
+
 
 // delete a workout <3
 const deleteWorkout = async (req, res) =>{
@@ -61,6 +68,7 @@ if(emptyFields.length > 0) {
 }
 
 
+
  // add doc to db 
     try {
       const workout = await Workout.create({title, load, reps})
@@ -89,6 +97,8 @@ const updateWorkout = async (req, res) => {
 
   res.status(200).json(workout)
 }
+
+
 
 module.exports = {
   getWorkouts,
